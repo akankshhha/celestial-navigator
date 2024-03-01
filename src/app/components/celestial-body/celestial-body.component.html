@@ -1,1 +1,9 @@
-<h1 class="bg-slate-600">hi</h1>
+<div class="celestial-body-card" (click) = "openAlmanac(celestialBody.name)">
+    <div class="card-header">
+      <h2>{{ celestialBody.name }}</h2>
+    </div>
+    <div class="card-body">
+      <p>Population: {{celestialBody.population}}</p>
+      <p>Terrain: {{celestialBody.terrain}}</p>
+    </div>
+  </div>
