@@ -9,6 +9,10 @@
 
 }
 
+.long-text {
+  font-size: 1.8rem;
+}
+
 .typing-animation {
     overflow: hidden;
     white-space: nowrap;
