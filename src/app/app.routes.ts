@@ -3,14 +3,12 @@ import { GalacticSystemComponent } from './components/galactic-system/galactic-s
 import { PlanetologyComponent } from './components/planetology/planetology.component';
 import { HomeComponent } from './components/home/home.component';
 import { FilmsComponent } from './components/films/films.component';
-import { StarshipsVehiclesComponent } from './components/starships-vehicles/starships-vehicles.component';
-
+import { TransportationComponent } from './components/transportation/transportation.component';
 export const routes: Routes = [
     { path: '', redirectTo: '/navigate', pathMatch: 'full' },
     { path: 'navigate', component: HomeComponent },
     { path: 'galactic-system', component: GalacticSystemComponent },
-    { path: 'films', component: FilmsComponent },
-    { path: 'starships-vehicles', component: StarshipsVehiclesComponent },
+    { path: 'transportation', component: TransportationComponent },
     { path: 'planet/:id', component: PlanetologyComponent },
     { path: '**', redirectTo: '/galactic-system' } 
 ];

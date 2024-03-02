@@ -22,3 +22,10 @@
 .previousPage {
     transform: scaleX(-1);
 }
+
+.back {
+    border: 3px solid #B70000;
+    color: white;
+    font-family: 'swJedi', sans-serif; 
+
+}

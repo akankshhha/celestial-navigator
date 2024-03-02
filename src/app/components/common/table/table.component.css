@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "pixeboy";
+    src: url("../../../../assets/fonts/Pixeboy.ttf");
+}
+
+html {
+    color:  white;
+   
+}
+table {
+    font-family: "pixeboy", sans-serif;  
+    letter-spacing: 1.5px; 
+}
+
+tr:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+.previousPage, .nextPage {
+    width: 4rem;
+}
+
+.previousPage {
+    transform: scaleX(-1);
+}
+
+  .typing-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing-animation 2s steps(60, end);
+  }
+  
+  @keyframes typing-animation {
+    from { width: 0; }
+    to { width: 100%; }
+  }

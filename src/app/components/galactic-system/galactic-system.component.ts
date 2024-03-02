@@ -2,13 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CelestialBodyComponent } from '../celestial-body/celestial-body.component';
 import { CommonModule } from '@angular/common';
 import { GalacticService } from '../../services/galactic.service';
-import { GlobalSearchComponent } from '../common/global-search/global-search.component';
-import { firstValueFrom, lastValueFrom } from 'rxjs';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-galactic-system',
   standalone: true,
-  imports: [CelestialBodyComponent, GlobalSearchComponent, CommonModule],
+  imports: [CelestialBodyComponent, CommonModule],
   templateUrl: './galactic-system.component.html',
   styleUrl: './galactic-system.component.css'
 })

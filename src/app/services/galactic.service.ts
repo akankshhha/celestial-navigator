@@ -13,8 +13,20 @@ export class GalacticService {
     return this.http.get(url)
    }
 
+   getNextPage(url: any) {
+    return this.http.get(url)
+   }
+
    getPlanetDetails(planetId: any) {
     return this.http.get(this.planetUrl + `/${planetId}`)
+   }
+
+   getVehicles() {
+    return this.http.get("https://swapi.dev/api/vehicles")
+   }
+
+   getStarships() {
+    return this.http.get("https://swapi.dev/api/starships")
    }
 
 }
