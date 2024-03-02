@@ -1,0 +1,35 @@
+
+
+body {
+    font-family: 'swJedi', sans-serif; 
+  }
+
+  .planetology-screen{
+    background-image: url('../../../assets/galaxy.webp');
+    background-size: contain;
+}
+.card{
+    border: 8px solid #B70000;
+}
+
+.icon{
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+.info-card{
+    width: 25rem;
+    margin-block: 0.5rem;
+   
+}
+p {
+    font-family: 'swJedi', sans-serif; 
+    font-size: 1rem;
+}
+
+.planet-name {
+    color: beige;
+    font-family: 'swJedi', sans-serif; 
+    font-size: 7rem;
+}

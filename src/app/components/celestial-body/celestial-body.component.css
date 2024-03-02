@@ -1,5 +1,6 @@
 .celestial-body-card{
     width: 25rem;
     height: 10rem;
-    border: 1px solid #000;
+    border: 2px solid #f19d17;
+    color: beige;
 }

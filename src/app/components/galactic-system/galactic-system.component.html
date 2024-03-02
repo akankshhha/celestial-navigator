@@ -1,12 +1,16 @@
-<div class="container-parent p-3 m-8">
+<div class="container-parent">
+    <div class="flex items-center">
+    <app-global-search [listOfObjects]="planetData"></app-global-search>
+        <h1 class="main-text text-7xl text-right p-8  w-screen" data-aos="fade-down" >Galactic system</h1>
+    </div>
 <div class="planets-section grid gap-5 grid-cols-2 p-3 justify-items-center">
     <div *ngFor="let planet of planetData">
         <app-celestial-body [celestialBody] = "planet"></app-celestial-body>
     </div>
 </div>
 <div>
-    <button (click) = "previousPage()">previous please</button>
-    <button (click) = "nextPage()">next please</button>
+    <button (click) = "previousPage()">prev</button>
+    <button (click) = "nextPage()">next</button>
 </div>
 </div>
 

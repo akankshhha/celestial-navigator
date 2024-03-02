@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { GalacticSystemComponent } from './components/galactic-system/galactic-system.component';
 import { RouterOutlet } from '@angular/router';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 @Component({
   selector: 'app-root',

@@ -1,3 +1,14 @@
-.container-parent{
-    background-color: bisque;
+button {
+    color: white
+}
+
+.container-parent, html {
+    background-image: url("../../../assets//panet-cards-bg.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+.main-text{
+    color: rgb(250, 186, 36);
+    font-family: 'swJhol', sans-serif; 
 }

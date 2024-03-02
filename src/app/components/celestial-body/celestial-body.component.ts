@@ -15,7 +15,8 @@ export class CelestialBodyComponent implements OnInit{
 
   ngOnInit(): void {}
 
-  openAlmanac(celestialBodyName: string) {
-    this._router.navigate(['/planet', celestialBodyName ])
+  openAlmanac(planetURL: any) {
+    const planetId: any = planetURL.split('/').slice(-2, -1)[0]
+    this._router.navigate(['/planet', planetId])
   }
 }
