@@ -9,8 +9,8 @@ export class GalacticService {
   public residentDetails = "https://swapi.dev/api/people";
   constructor(private http: HttpClient) { }
 
-   getPlanets() {
-    return this.http.get(this.planetUrl)
+   getPlanets(url: any) {
+    return this.http.get(url)
    }
 
    getPlanetDetails(planetId: any) {

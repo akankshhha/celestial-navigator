@@ -9,13 +9,16 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './global-search.component.css'
 })
 export class GlobalSearchComponent implements OnInit{
+
   @Input() listOfObjects: any
+  @Input() text: any
+
   public filterObj: any = []
   public searchQuery: string = ''
 
   ngOnInit(): void {
+    console.log(this.listOfObjects)
     this.filterObj = this.listOfObjects
-    console.log( this.filterObj)
 
   }
 

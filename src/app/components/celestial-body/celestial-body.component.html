@@ -1,9 +1,13 @@
-<div class="celestial-body-card" (click) = "openAlmanac(celestialBody.url)">
-    <div class="card-header">
-      <h2>{{ celestialBody.name }}</h2>
-    </div>
-    <div class="card-body">
-      <p>Population: {{celestialBody.population}}</p>
-      <p>Terrain: {{celestialBody.terrain}}</p>
-    </div>
+<div
+  class="celestial-body-card relative overflow-hidden rounded-lg hover:scale-105 bg-gray-800 bg-opacity-60 transition-transform duration-300"
+  (click)="openAlmanac(celestialBody.url)">
+
+  <h2 class="main-text absolute top-0 right-0 p-4 text-4xl text-white " [ngClass] = "{ 'long-text' : isLongText}" [innerHTML]="celestialBody.name"></h2>
+  <div class="image-container">
+    <div class="image"></div>
+   
   </div>
+  <div class="text">Enter</div>
+
+
+</div>

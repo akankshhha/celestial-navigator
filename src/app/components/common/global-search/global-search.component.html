@@ -1,9 +1,10 @@
-<div>
+<div class="p-4 bg-gray-800 bg-opacity-75 rounded-full search-box mx-10">
     <img src="" alt="">
     <input 
         type="text"
         [(ngModel)]="searchQuery"
-        placeholder="Search"
-        (change) = "filterPlanets()"
-        >
+        placeholder={{text}}
+        (change)="filterPlanets()"
+        class="bg-transparent outline-none ml-2"
+    >
 </div>

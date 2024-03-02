@@ -1,17 +1,26 @@
-<div class="container-parent">
+<div class="container-parent justify-items-center">
     <div class="flex items-center">
-    <app-global-search [listOfObjects]="planetData"></app-global-search>
-        <h1 class="main-text text-7xl text-right p-8  w-screen" data-aos="fade-down" >Galactic system</h1>
+        <div *ngIf="planetData && planetData.length > 0">
+            <app-global-search [listOfObjects]="planetData" [text]="text">
+            </app-global-search>
+        </div>
+        <h1 class="main-text text-7xl text-right p-8  w-screen" data-aos="fade-down">Galactic system</h1>
     </div>
-<div class="planets-section grid gap-5 grid-cols-2 p-3 justify-items-center">
-    <div *ngFor="let planet of planetData">
-        <app-celestial-body [celestialBody] = "planet"></app-celestial-body>
+
+    <div class="flex items-center ">
+        <button (click)="previousPage()" class="ml-10">
+            <img src="../../../assets/yellow-next.png" alt="" class="previousPage">
+        </button>
+        <div class="flex grid gap-5 gap-x-1 grid-cols-2 justify-items-center w-screen" data-aos="fade-right">
+            <div *ngFor="let planet of planetData">
+                <app-celestial-body [celestialBody]="planet"></app-celestial-body>
+            </div>
+
+        </div>
+        <button (click)="nextPage()" class="mr-10">
+            <img src="../../../assets/yellow-next.png" alt="" class="nextPage">
+        </button>
     </div>
-</div>
-<div>
-    <button (click) = "previousPage()">prev</button>
-    <button (click) = "nextPage()">next</button>
-</div>
-</div>
 
 
+</div>

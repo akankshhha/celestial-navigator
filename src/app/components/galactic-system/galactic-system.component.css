@@ -1,14 +1,24 @@
-button {
+/* button {
     color: white
-}
+} */
 
 .container-parent, html {
     background-image: url("../../../assets//panet-cards-bg.webp");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+background-attachment: fixed;
 }
 
 .main-text{
     color: rgb(250, 186, 36);
     font-family: 'swJhol', sans-serif; 
+}
+
+.previousPage, .nextPage {
+    width: 4rem;
+}
+
+.previousPage {
+    transform: scaleX(-1);
 }

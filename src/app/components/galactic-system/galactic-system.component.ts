@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { CelestialBodyComponent } from '../celestial-body/celestial-body.component';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { GalacticService } from '../../services/galactic.service';
 import { GlobalSearchComponent } from '../common/global-search/global-search.component';
+import { firstValueFrom, lastValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-galactic-system',
@@ -17,9 +18,9 @@ public planetData: any = [];
 public currentPage = 1;
 private apiUrl: string =  "https://swapi.dev/api/planets/?format=json"
 public pageData: any;
+public text: string = "Search for planet.."
 
 constructor (
-  private http: HttpClient,
   private _galacticService: GalacticService
       ) {}
 
@@ -27,17 +28,20 @@ ngOnInit(): void {
   this.getPlanets()
 
 }
-getPlanets() {
-  this._galacticService.getPlanets().subscribe((res: any) => {
-    this.pageData = res
-    this.planetData = res.results
-  })
-  console.log(this.planetData)
-}
+
+async getPlanets() {
+  try {
+     const res: any = await firstValueFrom(this._galacticService.getPlanets(this.apiUrl)) 
+     this.pageData = res;
+     this.planetData = res?.results;
+     console.log(this.planetData)
+  } catch (error) {
+     console.error('Error fetching planets:', error);
+  }
+ }
 
 nextPage() {
   this.apiUrl = this.pageData.next
-  console.log("next")
   if(this.apiUrl === null) {
     return
   } 

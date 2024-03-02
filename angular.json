@@ -22,10 +22,13 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/fonts/Starjedi.ttf",
+              "src/assets/fonts/Starjhol.ttf"
             ],
             "styles": [
               "src/styles.css"
+             
             ],
             "scripts": []
           },
@@ -81,7 +84,9 @@
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/fonts/Starjedi.ttf",
+              "src/assets/fonts/Starjhol.ttf"
             ],
             "styles": [
               "src/styles.css"
