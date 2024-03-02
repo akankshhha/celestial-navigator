@@ -20,8 +20,7 @@ export class TableComponent implements OnInit{
   }
   async getNextResponse() {
     try {
-      console.log(this.data)
-       const res: any = await firstValueFrom(this._gs.getNextPage(this.data.url)) 
+       const res: any = await firstValueFrom(this._gs.navigatePage(this.data.url)) 
        this.data = res;
     } catch (error) {
        console.error('Error fetching planets:', error);

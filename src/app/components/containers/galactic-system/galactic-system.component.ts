@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CelestialBodyComponent } from '../celestial-body/celestial-body.component';
+import { CelestialBodyComponent } from '../../cards/celestial-body/celestial-body.component';
 import { CommonModule } from '@angular/common';
-import { GalacticService } from '../../services/galactic.service';
+import { GalacticService } from '../../../services/galactic.service';
 import { firstValueFrom } from 'rxjs';
 
 @Component({

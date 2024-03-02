@@ -1,0 +1,24 @@
+<div class="container-parent">
+    <div class="flex items-center">
+        <!-- <button class="py-4 px-2 mx-10 back w-32">Go back</button> -->
+
+        <h1 class="main-text text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-center sm:text-right p-4 sm:p-8 w-full sm:w-screen" data-aos="fade-down">Galactic system</h1>
+    </div>
+
+    <div class="flex items-center ">
+        <button (click)="previousPage()" class="ml-4 sm:ml-10">
+            <img src="../../../../assets/yellow-next.png" alt="" class="previousPage">
+        </button>
+        <div class="flex grid gap-5 gap-x-1 grid-cols-2 justify-items-center sm:gap-8 w-full sm:w-screen" data-aos="fade-right">
+            <div *ngFor="let planet of planetData">
+                <app-celestial-body [celestialBody]="planet"></app-celestial-body>
+            </div>
+
+        </div>
+        <button (click)="nextPage()" class="mr-10">
+            <img src="../../../../assets/yellow-next.png" alt="" class="nextPage">
+        </button>
+    </div>
+
+
+</div>

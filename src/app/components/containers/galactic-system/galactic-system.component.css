@@ -3,7 +3,7 @@
 } */
 
 .container-parent, html {
-    background-image: url("../../../assets//panet-cards-bg.webp");
+    background-image: url("../../../../assets/panet-cards-bg.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -1,36 +1,37 @@
 @font-face {
     font-family: "pixeboy";
-    src: url("../../../assets/fonts/Pixeboy.ttf");
+    src: url("../../../../assets/fonts/Pixeboy.ttf");
 }
 
 
-.celestial-body-card{
+.celestial-body-card {
     width: 25rem;
     height: 8rem;
     border: 4px solid #2C8BCF;
 
 }
 
-.main-text{
+.main-text {
     color: #BCC9DA;
-    font-family: 'swJedi', sans-serif; 
+    font-family: 'swJedi', sans-serif;
 }
 
 .image-container {
     position: relative;
-   width: 150px;
-   height: 150px;
+    width: 150px;
+    height: 150px;
 }
 
 .image {
     width: 100%;
     height: 100%;
-    background-image: url('../../../assets/planet-enter.png'); /* Path to your initial image */
+    background-image: url('../../../../assets/planet-enter.png');
+    /* Path to your initial image */
     /* background-size: cover;
     background-position: center; */
     background-repeat: no-repeat;
     transition: background-image 0.2s;
-    
+
 }
 
 .text {
@@ -38,23 +39,26 @@
     bottom: 10%;
     left: 85%;
     transform: translateX(-50%);
-    color: #c6410c;;
+    color: #c6410c;
+    ;
     /* padding: 8px; */
     font-size: 1.5rem;
-    opacity: 0; /* Initially hidden */
+    opacity: 0;
+    /* Initially hidden */
     transition: opacity 0.3s;
     font-family: "pixeboy";
 }
 
 .celestial-body-card:hover .image {
-    background-image: url('../../../assets/planet-img.png'); /* Path to your second image */
+    background-image: url('../../../../assets/planet-img.png');
+    /* Path to your second image */
 }
 
 .celestial-body-card:hover .text {
-    opacity: 1; /* Show text on hover */
+    opacity: 1;
+    /* Show text on hover */
 }
 
 .long-text {
     font-size: 2rem;
 }
-

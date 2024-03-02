@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
-import { GalacticService } from '../../services/galactic.service';
-import { ResidentProfileComponent } from '../resident-profile/resident-profile.component';
+import { GalacticService } from '../../../services/galactic.service';
+import { ResidentProfileComponent } from '../../cards/resident-profile/resident-profile.component';
 import { CommonModule } from '@angular/common';
 import { firstValueFrom, lastValueFrom } from 'rxjs';
 

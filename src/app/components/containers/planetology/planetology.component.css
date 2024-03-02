@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'swJhol';
-    src: url('../../../assets/fonts/Starjhol.ttf') format('truetype');
+    src: url('../../../../assets/fonts/Starjhol.ttf') format('truetype');
 
 }
 
   .planetology-screen{
-    background-image: url('../../../assets/galaxy.webp');
+    background-image: url('../../../../assets/galaxy.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

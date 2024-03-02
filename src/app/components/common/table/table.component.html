@@ -1,33 +1,31 @@
 <div class="flex items-center">
-  <button (click)="previousPage()" class="ml-10">
+  <button (click)="previousPage()" class="ml-4 sm:ml-10">
     <img src="../../../assets/yellow-next.png" alt="" class="previousPage">
-</button>
-<table class="w-4/5 bg-gray-800 text-white rounded-sm overflow-hidden m-auto ">
-  <thead>
-    <tr>
-      <th *ngFor="let column of columns" class="p-4 text-xl text-center "> {{ column.toUpperCase() }}</th>
-    </tr>
-  </thead>
-  <tbody>
-    <ng-container *ngIf="data.results && data.results.length > 0">
-      <tr *ngFor="let item of data.results" class="bg-gray-700 hover:bg-gray-600 transition-colors duration-300 py-5">
-        <ng-container *ngFor="let column of columns">
-          <td class="py-4 text-center text-lg mx-4">{{ item[column.toLowerCase()] }}</td>
-        </ng-container>
+  </button>
+
+  <table class="w-full sm:w-4/5 md:w-3/5 lg:w-4/5 bg-gray-800 text-white rounded-sm overflow-hidden mx-auto mt-4 sm:mt-0">
+    <thead>
+      <tr>
+        <th *ngFor="let column of columns" class="p-3 sm:p-4 text-base md:text-lg lg:text-xl text-center">
+          {{ column.toUpperCase() }}
+        </th>
       </tr>
-    </ng-container>
-    <tr *ngIf="!data || data.results?.length === 0">
-      <td [attr.colspan]="columns.length" class="py-4 text-center">No data available</td>
-    </tr>
-  </tbody>
-</table>
-<button (click)="nextPage()" class="mr-10">
-  <img src="../../../assets/yellow-next.png" alt="" class="nextPage">
-</button>
+    </thead>
+    <tbody>
+      <ng-container *ngIf="data.results && data.results.length > 0">
+        <tr *ngFor="let item of data.results" class="bg-gray-700 hover:bg-gray-600 transition-colors duration-300 py-4 sm:py-5">
+          <ng-container *ngFor="let column of columns">
+            <td class="py-2 sm:py-4 text-center text-base md:text-lg lg:text-xl mx-2 sm:mx-4">{{ item[column.toLowerCase()] }}</td>
+          </ng-container>
+        </tr>
+      </ng-container>
+      <tr *ngIf="!data || data.results?.length === 0">
+        <td [attr.colspan]="columns.length" class="py-4 text-center">No data available</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button (click)="nextPage()" class="mr-4 sm:mr-10">
+    <img src="../../../assets/yellow-next.png" alt="" class="nextPage">
+  </button>
 </div>
-
-
-
-
-
-

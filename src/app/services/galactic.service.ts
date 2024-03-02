@@ -5,22 +5,24 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class GalacticService {
-  public planetUrl: string = "https://swapi.dev/api/planets";
-  public residentDetails = "https://swapi.dev/api/people";
   constructor(private http: HttpClient) { }
 
-   getPlanets(url: any) {
+  //fetch planet details based on URL provided
+   getPlanets(url: any) { 
     return this.http.get(url)
    }
 
-   getNextPage(url: any) {
+   //pagination
+   navigatePage(url: any) {
     return this.http.get(url)
    }
 
+   //fetching planet detials based on activated route params.
    getPlanetDetails(planetId: any) {
-    return this.http.get(this.planetUrl + `/${planetId}`)
+    const url = "https://swapi.dev/api/planets"
+    return this.http.get(url + `/${planetId}`)
    }
-
+   
    getVehicles() {
     return this.http.get("https://swapi.dev/api/vehicles")
    }

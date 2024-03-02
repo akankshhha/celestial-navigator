@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TableComponent } from '../common/table/table.component';
-import { GalacticService } from '../../services/galactic.service';
+import { TableComponent } from '../../common/table/table.component';
+import { GalacticService } from '../../../services/galactic.service';
 import { lastValueFrom } from 'rxjs';
 
 @Component({

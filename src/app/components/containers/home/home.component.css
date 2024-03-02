@@ -1,7 +1,7 @@
 
 .container-parent {
     font-family: 'swJedi', sans-serif; 
-    background-image: url("../../../assets/main-screen.jpg");
+    background-image: url("../../../../assets/main-screen.jpg");
     background-size: cover;
     background-repeat: no-repeat;
   }
