@@ -17,7 +17,6 @@ export class GlobalSearchComponent implements OnInit{
   public searchQuery: string = ''
 
   ngOnInit(): void {
-    console.log(this.listOfObjects)
     this.filterObj = this.listOfObjects
 
   }
@@ -27,7 +26,6 @@ export class GlobalSearchComponent implements OnInit{
       item.name.toLowerCase().includes(this.searchQuery.toLowerCase())
       
     );
-    console.log( this.filterObj)
 
   }
 }

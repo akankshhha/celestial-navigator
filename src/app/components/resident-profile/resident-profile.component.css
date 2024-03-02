@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "pixeboy";
+    src: url("../../../assets/fonts/Pixeboy.ttf");
+}
+
+.details{
+    font-family: "pixeboy";
+    border: 6px solid rgb(227, 168, 31);
+
+}
+
+.typing-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing-animation 1s steps(40, end);
+  }
+  
+  @keyframes typing-animation {
+    from { width: 0; }
+    to { width: 100%; }
+  }

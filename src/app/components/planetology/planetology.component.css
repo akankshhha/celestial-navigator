@@ -1,12 +1,15 @@
+@font-face {
+    font-family: 'swJhol';
+    src: url('../../../assets/fonts/Starjhol.ttf') format('truetype');
 
-
-body {
-    font-family: 'swJedi', sans-serif; 
-  }
+}
 
   .planetology-screen{
     background-image: url('../../../assets/galaxy.webp');
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+background-attachment: fixed;
 }
 .card{
     border: 8px solid #B70000;
@@ -33,3 +36,19 @@ p {
     font-family: 'swJedi', sans-serif; 
     font-size: 7rem;
 }
+
+.basic-info{
+    font-family: 'swJhol';
+    color: #2C8BCF;
+}
+
+.typing-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing-animation 2s steps(60, end);
+  }
+  
+  @keyframes typing-animation {
+    from { width: 0; }
+    to { width: 100%; }
+  }

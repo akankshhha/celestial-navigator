@@ -1,7 +1,6 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CelestialBodyComponent } from '../celestial-body/celestial-body.component';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import { GalacticService } from '../../services/galactic.service';
 import { GlobalSearchComponent } from '../common/global-search/global-search.component';
 import { firstValueFrom, lastValueFrom } from 'rxjs';
@@ -34,7 +33,6 @@ async getPlanets() {
      const res: any = await firstValueFrom(this._galacticService.getPlanets(this.apiUrl)) 
      this.pageData = res;
      this.planetData = res?.results;
-     console.log(this.planetData)
   } catch (error) {
      console.error('Error fetching planets:', error);
   }

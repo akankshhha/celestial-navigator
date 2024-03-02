@@ -17,14 +17,9 @@ export class CelestialBodyComponent implements OnInit{
 
   ngOnInit(): void {
     
-    const words = this.celestialBody.name.trim().split(/[ ,]+/)
-    console.log(words)
-    if(words.length === 1 && this.celestialBody.name.length > 9) {
+    if( this.celestialBody.name.length > 10) {
       this.isLongText = true
-    } else if(words.length === 2 && this.celestialBody.name.length > 10) {
-     
-      this.celestialBody.name =  words.join('<br>')
-    }
+    } 
 
   }
 

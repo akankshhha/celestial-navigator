@@ -1,56 +1,71 @@
-<div class="planetology-screen h-screen">
-    <h1 class="planet-name">{{planetData?.name}}</h1>
-<div class="card min-w-[36rem] max-w-[35rem] bg-white rounded-md p-6">
-    <div class="flex info-card items-center">
-        <img src="../../../assets/orbit.png" alt="orbit" class="icon">
-        <p>orbital period :
-            <span> 
-                {{planetData?.orbital_period}}
-            </span>
-        </p>
+<div class="planetology-screen m-auto">
+   <div class="section justify-center flex flex-col">
+    <h1 class="planet-name mx-10 text-center">{{planetData?.name}}</h1>
+    <h3 class="basic-info text-4xl font-bold text-center my-10">Basic Information</h3>
+
+    <div class="justify-center">
+        <div class="card bg-white rounded-md p-4 w-[35rem] m-auto">
+            <div class="flex info-card items-center typing-animation">
+                <img src="../../../assets/orbit.png" alt="orbit" class="icon">
+                <p>orbital period :
+                    <span> 
+                        {{planetData?.orbital_period}}
+                    </span>
+                </p>
+            </div>
+            <div class="flex info-card items-center typing-animation">
+                <img src="../../../assets/rotation.png" alt="" class="icon">
+                <p>rotation period :
+                    <span> 
+                        {{planetData?.rotation_period}}
+                    </span>
+                </p>
+            </div>
+           
+            <div class="flex info-card items-center typing-animation">
+                <img src="../../../assets/baby-yoda.png" alt=""  class="icon">
+                <p>population : 
+                    <span> 
+                        {{planetData?.population}}
+                    </span>
+                </p>
+            </div>
+            <div class="flex info-card items-center typing-animation">
+                <img src="../../../assets/terrain.png" alt="orbit" class="icon">
+                <p>terrain :
+                    <span> 
+                        {{planetData?.terrain}}
+                    </span>
+                </p>
+            </div>
+            <div class="flex info-card items-center typing-animation">
+                <img src="../../../assets/diamter.png" alt="orbit" class="icon">
+                <p>diameter :
+                    <span> 
+                        {{planetData?.diameter}}
+                    </span>
+                </p>
+            </div>
+            <div class="flex info-card items-center typing-animation">
+                <img src="../../../assets/climate.png" alt="orbit" class="icon">
+                <p>climate : 
+                    <span> 
+                        {{planetData?.climate}}
+                    </span>
+                </p>
+            </div>
+           
+        </div>
     </div>
-    <div class="flex info-card items-center">
-        <img src="../../../assets/rotation.png" alt="" class="icon">
-        <p>rotation period :
-            <span> 
-                {{planetData?.rotation_period}}
-            </span>
-        </p>
-    </div>
-   
-    <div class="flex info-card items-center">
-        <img src="../../../assets/baby-yoda.png" alt=""  class="icon">
-        <p>population : 
-            <span> 
-                {{planetData?.population}}
-            </span>
-        </p>
-    </div>
-    <div class="flex info-card items-center">
-        <img src="../../../assets/terrain.png" alt="orbit" class="icon">
-        <p>terrain :
-            <span> 
-                {{planetData?.terrain}}
-            </span>
-        </p>
-    </div>
-    <div class="flex info-card items-center">
-        <img src="../../../assets/diamter.png" alt="orbit" class="icon">
-        <p>diameter :
-            <span> 
-                {{planetData?.diameter}}
-            </span>
-        </p>
-    </div>
-    <div class="flex info-card items-center">
-        <img src="../../../assets/climate.png" alt="orbit" class="icon">
-        <p>climate : 
-            <span> 
-                {{planetData?.climate}}
-            </span>
-        </p>
-    </div>
-   
-</div>
+   </div>
+   <h3 class="basic-info text-4xl font-bold text-center my-10">{{miniHeading}}</h3>
+        <ng-container *ngIf = "residentDetails && residentDetails.length > 0">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 w-5/6 m-auto p-10">
+                <div *ngFor="let resident of residentDetails" >
+                  <app-resident-profile [residentDetails]="resident"></app-resident-profile>
+                </div>
+              </div>
+        </ng-container>
+
   
 </div>

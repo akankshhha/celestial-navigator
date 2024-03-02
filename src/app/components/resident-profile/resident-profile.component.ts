@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-resident-profile',
@@ -7,6 +7,10 @@ import { Component, Input } from '@angular/core';
   templateUrl: './resident-profile.component.html',
   styleUrl: './resident-profile.component.css'
 })
-export class ResidentProfileComponent {
-@Input() resientDetails: any;
+export class ResidentProfileComponent implements OnInit {
+
+@Input() residentDetails: any;
+
+ngOnInit(): void {
+}
 }
