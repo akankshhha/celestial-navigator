@@ -1,7 +1,7 @@
 # CelestialNavigator
 
 ## Live link:
-master--tangerine-macaron-4bf694.netlify.app/navigate
+master--tangerine-macaron-4bf694.netlify.app
 
 This web-app/website acts as a database for information regarding star wars franchise. 
 
