@@ -1,4 +1,8 @@
-Here lies description for celestial-navigator. ---
+Here lies description for celestial-navigator.
+
+Live link: master--tangerine-macaron-4bf694.netlify.app/navigate
+
+This web-app/website acts as a database for information of star wars. Modules implemented: Planets, Residents in each planet, Starships and Vehicles.
 
 
 # CelestialNavigator
