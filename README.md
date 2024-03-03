@@ -1,5 +1,18 @@
 # CelestialNavigator
 
+## Live link:
+master--tangerine-macaron-4bf694.netlify.app/navigate
+
+This web-app/website acts as a database for information regarding star wars franchise. 
+
+## Modules implemented: 
+Galactic System (PLanets in star wars) and TRansportation System (Starships and Vehicles)
+
+## Instructions to run this app locally:
+1. Clone this repository to your local machine using Git.
+2. Navigate to the local repository and install the node modules.
+3. Run the application locally and view it in localhost:4200.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
 
 ## Development server
