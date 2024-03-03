@@ -5,8 +5,8 @@
 }
 
   .planetology-screen{
-    background-image: url('../../../../assets/galaxy.jpg');
-    background-size: contain;
+    background-image: url('../../../../assets/main-screen.jpg');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 background-attachment: fixed;
@@ -14,7 +14,9 @@ background-attachment: fixed;
 .card{
     border: 8px solid #B70000;
 }
-
+.category{
+    color: #B70000;
+}
 .icon{
     width: 3rem;
     height: 3rem;
@@ -22,7 +24,6 @@ background-attachment: fixed;
 }
 
 .info-card{
-    width: 25rem;
     margin-block: 0.5rem;
    
 }
@@ -34,12 +35,12 @@ p {
 .planet-name {
     color: beige;
     font-family: 'swJedi', sans-serif; 
-    font-size: 7rem;
+    font-size: 5rem;
 }
 
 .basic-info{
     font-family: 'swJhol';
-    color: #2C8BCF;
+    color: #5e9cc9;
 }
 
 .typing-animation {

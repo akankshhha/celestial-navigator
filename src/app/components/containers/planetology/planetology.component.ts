@@ -33,7 +33,8 @@ export class PlanetologyComponent implements OnInit {
 
     await this.fetchPlanetData()
     await this.fetchResidents()
-    this.miniHeading = this.residentDetails.length === 0 ? "No resident information available in the database!" : "Resident information "
+
+    this.miniHeading = this.residentDetails.length === 0 ? `No resident information available in the database for ${this.planetData.name}!` : "Resident information"
   }
 
   async fetchPlanetData() {

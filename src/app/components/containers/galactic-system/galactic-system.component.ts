@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CelestialBodyComponent } from '../../cards/celestial-body/celestial-body.component';
 import { CommonModule } from '@angular/common';
+import { GoBackComponent } from '../../common/go-back/go-back.component';
 import { GalacticService } from '../../../services/galactic.service';
 import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-galactic-system',
   standalone: true,
-  imports: [CelestialBodyComponent, CommonModule],
+  imports: [CelestialBodyComponent, CommonModule, GoBackComponent],
   templateUrl: './galactic-system.component.html',
   styleUrl: './galactic-system.component.css'
 })

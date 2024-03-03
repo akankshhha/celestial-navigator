@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Aos from 'aos';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,13 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
 
   constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    Aos.init()
+  }
 
   navigateTo(route: string): void {
     this.router.navigate([route]);

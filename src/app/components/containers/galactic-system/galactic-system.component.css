@@ -14,6 +14,11 @@
     color: rgb(250, 186, 36);
     font-family: 'swJhol', sans-serif; 
 }
+.sub-text{
+    font-family: 'pixeboy', sans-serif; 
+    color: #ffffff;
+    letter-spacing:1.5px ;
+}
 
 .previousPage, .nextPage {
     width: 4rem;

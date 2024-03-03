@@ -1,22 +1,22 @@
 <div class="planetology-screen m-auto">
     <div class="section justify-center flex flex-col">
         <h1 class="planet-name mx-10 text-center">{{planetData?.name}}</h1>
-        <h3 class="basic-info text-4xl font-bold text-center my-10">Basic Information</h3>
+        <h3 class="basic-info text-4xl font-bold text-center my-8">basic Information</h3>
 
         <div class="justify-center">
             <div class="card bg-white rounded-md p-4 w-full sm:w-[35rem] m-auto">
                 <div class="flex info-card items-center typing-animation">
                     <img src="../../../assets/orbit.png" alt="orbit" class="icon">
-                    <p>orbital period :
-                        <span> 
+                    <p class="category whitespace-normal">orbital period (days):
+                        <span class="text-black"> 
                             {{planetData?.orbital_period}}
                         </span>
                     </p>
                 </div>
                 <div class="flex info-card items-center typing-animation">
                     <img src="../../../assets/rotation.png" alt="" class="icon">
-                    <p>rotation period :
-                        <span> 
+                    <p class="category whitespace-normal">rotation period (hours):
+                        <span class="text-black"> 
                             {{planetData?.rotation_period}}
                         </span>
                     </p>
@@ -24,32 +24,32 @@
                 
                 <div class="flex info-card items-center typing-animation">
                     <img src="../../../assets/baby-yoda.png" alt=""  class="icon">
-                    <p>population : 
-                        <span> 
+                    <p class="category whitespace-normal">population : 
+                        <span class="text-black"> 
                             {{planetData?.population}}
                         </span>
                     </p>
                 </div>
                 <div class="flex info-card items-center typing-animation">
                     <img src="../../../assets/terrain.png" alt="orbit" class="icon">
-                    <p>terrain :
-                        <span> 
+                    <p class="whitespace-normal category whitespace-normal">terrain :
+                        <span class="text-black"> 
                             {{planetData?.terrain}}
                         </span>
                     </p>
                 </div>
                 <div class="flex info-card items-center typing-animation">
                     <img src="../../../assets/diamter.png" alt="orbit" class="icon">
-                    <p>diameter :
-                        <span> 
+                    <p class="category whitespace-normal">diameter (miles):
+                        <span class="text-black"> 
                             {{planetData?.diameter}}
                         </span>
                     </p>
                 </div>
                 <div class="flex info-card items-center typing-animation">
                     <img src="../../../assets/climate.png" alt="orbit" class="icon">
-                    <p>climate : 
-                        <span> 
+                    <p class="category whitespace-normal">climate : 
+                        <span class="text-black"> 
                             {{planetData?.climate}}
                         </span>
                     </p>
@@ -58,7 +58,7 @@
             </div>
         </div>
     </div>
-    <h3 class="basic-info text-4xl font-bold text-center my-10">{{miniHeading}}</h3>
+    <h3 class="basic-info text-4xl font-bold text-center my-10 lg:w-3/4 m-auto">{{miniHeading}}</h3>
     <ng-container *ngIf="residentDetails && residentDetails.length > 0">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6 w-full sm:w-5/6 m-auto p-10">
             <div *ngFor="let resident of residentDetails">
